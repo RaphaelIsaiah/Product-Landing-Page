@@ -190,6 +190,12 @@ h2 {
   margin-top: 10px;
 }
 
+.price:hover {
+    transform: scale(1.02);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
 h3 {
   color: var(--color-1);
 }
