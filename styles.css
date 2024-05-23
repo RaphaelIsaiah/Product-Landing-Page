@@ -1,0 +1,310 @@
+:root {
+  --font-1: "Oswald", sans-serif;
+  --font-2: "Poppins", sans-serif;
+  --font-3: "Protest Revolution", sans-serif;
+  --color-1: #333;
+  --color-2: #232323;
+  --bg-color-1: #f5e9db;
+  --bg-color-2: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color-1);
+}
+
+/* Design for Mobile first... */
+/* #header{
+    margin-bottom: 900px;
+  } */
+
+#header-img {
+  width: 60px;
+  object-fit: contain;
+}
+
+#nav-bar {
+  background-color: var(--bg-color-2);
+  display: flex;
+  position: fixed;
+  top: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding: 7px;
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--color-1);
+  padding: 0 1rem;
+  font-family: var(--font-2);
+  cursor: pointer;
+  font-size: 100%;
+}
+
+#logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.product-name {
+  font-size: 27px;
+  margin-left: 1rem;
+  font-weight: 550;
+  font-family: var(--font-3);
+}
+
+section::before {
+  display: block;
+  content: " ";
+  margin-top: -180px;
+  height: 290px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+section {
+  margin: -60px auto;
+  text-align: center;
+  padding: 10px;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  /* background-color: chocolate; */
+  margin-top: 60px;
+}
+
+.aside {
+  /* background-color: rgb(113, 84, 63); */
+  padding: 20px 10px 10px;
+}
+
+.aside h1 {
+  font-family: var(--font-3);
+  font-size: 30px;
+  color: var(--color-2);
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 570;
+}
+
+.aside p {
+  color: var(--color-1);
+  font-family: var(--font-2);
+  margin-bottom: 10px;
+}
+
+.side {
+  width: 100%;
+}
+
+#hero-img {
+  width: 100%;
+  object-fit: cover;
+  height: 300px;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 1px 1px 10px grey;
+}
+
+#video {
+  width: 100%;
+  border-radius: 7px;
+}
+
+h2 {
+  font-family: var(--font-1);
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.gallery {
+  /* background-color: cadetblue; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  margin: auto;
+  /* width: 100%; */
+}
+
+.icon {
+  font-size: 25px;
+  color: rgb(127, 111, 127);
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  /* margin-bottom: 5px; */
+}
+
+.pricing-box {
+  /* background-color: cadetblue; */
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
+  width: 80%;
+  /* border: 1px solid var(--color-1); */
+  padding: 10px;
+  margin: 0 auto 20px;
+  border-radius: 10px;
+  /* box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3); */
+  box-shadow: 1px 1px 10px grey;
+  margin-top: 10px;
+}
+
+h3 {
+  color: var(--color-1);
+}
+
+.plus {
+  font-family: var(--font-1);
+  font-size: 20px;
+}
+
+.list,
+h3 {
+  font-family: var(--font-2);
+  margin-bottom: 5px;
+}
+.list {
+  list-style-type: none;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+#email {
+  width: 60%;
+}
+#form-section input {
+  padding: 12px;
+  border-radius: 7px;
+  box-shadow: 1px 1px 10px grey;
+  border: none;
+  font-family: var(--font-2);
+  font-weight: 700;
+  margin: 10px auto;
+  /* width: 80%; */
+}
+
+#submit {
+  width: 40%;
+}
+
+#submit:hover {
+  cursor: pointer;
+  background-color: var(--color-1);
+  color: var(--bg-color-2);
+}
+
+footer {
+  text-align: right;
+  font-family: var(--font-3);
+  font-size: 15px;
+  padding: 30px 20px 2px;
+}
+
+/* This applies when the width is 600px upwards */
+@media only screen and (min-width: 600px) {
+  #nav-bar {
+    flex-direction: row;
+  }
+  #hero-img {
+    height: 400px;
+  }
+  #hero {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 30px;
+    padding-top: 20px;
+  }
+  .aside {
+    width: 50%;
+    margin-top: 10px;
+  }
+  .side {
+    width: 40%;
+  }
+  #video {
+    width: 98%;
+  }
+  .pricing-box {
+    flex-direction: row;
+  }
+  .price {
+    width: 45%;
+  }
+}
+
+/* This is when the width is between 650px and 750px*/
+@media only screen and (650px < width < 750px) {
+  .gallery img {
+    max-width: 300px;
+  }
+}
+
+/* This applies when the width is < or = 450px */
+@media only screen and (455px >= width) {
+  #hero {
+    margin-top: 80px;
+  }
+}
+
+/* This applies when the width is < or = 200px */
+@media only screen and (269px >= width) {
+  #logo-box {
+    flex-wrap: wrap;
+  }
+  #hero {
+    margin-top: 130px;
+  }
+}
+
+/* This applies when the width is < or = 204px */
+@media only screen and (204px >= width) {
+  #hero {
+    margin-top: 13rem;
+  }
+}
