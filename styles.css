@@ -20,9 +20,6 @@ body {
 }
 
 /* Design for Mobile first... */
-/* #header{
-    margin-bottom: 900px;
-  } */
 
 #header-img {
   width: 60px;
@@ -95,12 +92,10 @@ section {
   width: 100%;
   margin: auto;
   padding: 10px;
-  /* background-color: chocolate; */
   margin-top: 60px;
 }
 
 .aside {
-  /* background-color: rgb(113, 84, 63); */
   padding: 20px 10px 10px;
 }
 
@@ -148,7 +143,6 @@ h2 {
 }
 
 .gallery {
-  /* background-color: cadetblue; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -156,7 +150,6 @@ h2 {
   gap: 10px;
   padding: 10px;
   margin: auto;
-  /* width: 100%; */
 }
 
 .icon {
@@ -170,30 +163,26 @@ h2 {
   height: 300px;
   object-fit: cover;
   border-radius: 10px;
-  /* margin-bottom: 5px; */
 }
 
 .pricing-box {
-  /* background-color: cadetblue; */
   display: flex;
   flex-direction: column;
 }
 
 .price {
   width: 80%;
-  /* border: 1px solid var(--color-1); */
   padding: 10px;
   margin: 0 auto 20px;
   border-radius: 10px;
-  /* box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3); */
   box-shadow: 1px 1px 10px grey;
   margin-top: 10px;
 }
 
 .price:hover {
-    transform: scale(1.02);
-    transition: 0.4s;
-    cursor: pointer;
+  transform: scale(1.02);
+  transition: 0.4s;
+  cursor: pointer;
 }
 
 h3 {
@@ -224,6 +213,25 @@ h3 {
 #email {
   width: 60%;
 }
+
+@keyframes tilt-shaking {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 #form-section input {
   padding: 12px;
   border-radius: 7px;
@@ -232,7 +240,14 @@ h3 {
   font-family: var(--font-2);
   font-weight: 700;
   margin: 10px auto;
-  /* width: 80%; */
+  transition: box-shadow 2s;
+}
+
+#form-section input:focus {
+  outline: none;
+  box-shadow: 1px 1px 10px 2px var(--color-2);
+  /* Needs to be activated by the pricing-boxes */
+  animation: tilt-shaking 0.2s ease-out 3;
 }
 
 #submit {
@@ -240,6 +255,7 @@ h3 {
 }
 
 #submit:hover {
+  transition: 0.9s;
   cursor: pointer;
   background-color: var(--color-1);
   color: var(--bg-color-2);
