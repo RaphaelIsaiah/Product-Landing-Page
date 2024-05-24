@@ -246,7 +246,9 @@ h3 {
 #form-section input:focus {
   outline: none;
   box-shadow: 1px 1px 10px 2px var(--color-2);
-  /* Needs to be activated by the pricing-boxes */
+}
+
+.shaking-input {
   animation: tilt-shaking 0.2s ease-out 3;
 }
 

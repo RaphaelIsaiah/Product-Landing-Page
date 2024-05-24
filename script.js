@@ -58,3 +58,37 @@ const renderGallery = (array) => {
 };
 
 renderGallery(galleryStore);
+
+// Functionality to focus the email input when one of the plans are clicked.
+const email = document.getElementById("email");
+const basicPlan = document.getElementById("basic-plan");
+const proPlan = document.getElementById("pro-plan");
+
+const focusInput = (name) => {
+  if (name === "basic") {
+    // Removes the class if it is present already.
+    email.classList.remove("shaking-input");
+
+    // Trigger the shaking effect.
+    email.focus();
+    email.classList.add("shaking-input");
+
+    console.log("Basic option was clicked.");
+  } else if (name === "pro") {
+    // Removes the class if it is present already
+    email.classList.remove("shaking-input");
+
+    // Trigger the shaking effect.
+    email.focus();
+    email.classList.add("shaking-input");
+
+    console.log("Pro option was clicked");
+  }
+};
+
+basicPlan.addEventListener("click", () => {
+  focusInput("basic");
+});
+proPlan.addEventListener("click", () => {
+  focusInput("pro");
+});
