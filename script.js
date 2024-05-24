@@ -65,24 +65,14 @@ const basicPlan = document.getElementById("basic-plan");
 const proPlan = document.getElementById("pro-plan");
 
 const focusInput = (name) => {
-  if (name === "basic") {
-    // Removes the class if it is present already.
+  if (name === "basic" || name === "pro") {
     email.classList.remove("shaking-input");
 
-    // Trigger the shaking effect.
     email.focus();
     email.classList.add("shaking-input");
-
-    console.log("Basic option was clicked.");
-  } else if (name === "pro") {
-    // Removes the class if it is present already
-    email.classList.remove("shaking-input");
-
-    // Trigger the shaking effect.
-    email.focus();
-    email.classList.add("shaking-input");
-
-    console.log("Pro option was clicked");
+    name === "basic"
+      ? console.log("You chose the Basic Plan")
+      : console.log("You chose the Pro Plan");
   }
 };
 
