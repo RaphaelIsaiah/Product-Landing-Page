@@ -15,24 +15,28 @@
       rel="stylesheet"
     />
     <title>Product Landing Page Project</title>
+    <script
+      src="https://kit.fontawesome.com/347e555568.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
     <!-- Header region -- Logo and NavBar --  -->
     <header id="header">
-      <nav id="nav-bar">
-        <div id="logo-box">
+      <nav class="topnav" id="nav-bar">
+        <!-- Product Logo and Name -->
+        <a id="logo-box" class="nav-link" href="#about">
           <img
             src="https://i.pinimg.com/736x/4a/90/fd/4a90fda47650ae46fa3c75d192522661.jpg"
             alt="product logo"
             id="header-img"
           />
           <span class="product-name">Tailor Institute</span>
-        </div>
-        <!-- <h1>Tailor Institute</h1> -->
+        </a>
 
-        <!-- Nav bar should always be at the top of the viewport... that is it should be fixed. -->
-        <ul class="nav-links">
+        <!-- Navigation Links -->
+        <ul id="myLinks" class="menu nav-links">
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#iframe" class="nav-link">Watch</a></li>
           <li><a href="#gallery-section" class="nav-link">Gallery</a></li>
@@ -40,6 +44,16 @@
           <li><a href="#form" class="nav-link">Contact</a></li>
           <!-- Each link when clicked should go to the corresponding section on the landing page.  -->
         </ul>
+
+        <!-- Hamburger Menu to toggle nav links -->
+        <a
+          id="bars"
+          href="javascript:void(0);"
+          class="icon"
+          onclick="toggleMenu()"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
       </nav>
     </header>
 

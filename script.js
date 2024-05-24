@@ -82,3 +82,35 @@ basicPlan.addEventListener("click", () => {
 proPlan.addEventListener("click", () => {
   focusInput("pro");
 });
+
+// Functionality for hamburger menu
+// Toggles the menu when hamburger icon is clicked.
+const toggleMenu = () => {
+  var links = document.getElementById("myLinks");
+  if (links.style.display === "block") {
+    links.style.display = "none";
+  } else {
+    links.style.display = "block";
+  }
+};
+
+// Functionality to handle changes in the media query
+const handleMediaQuery = (x) => {
+  let links = document.getElementById("myLinks");
+  if (x.matches) {
+    // If the media query matches (viewport width <= 760px)
+    links.style.display = "none";
+  } else {
+    // Otherwise (viewport width > 760px)
+    links.style.display = "flex";
+  }
+};
+
+// Create a MediaQueryList object for the specified media query
+var x = window.matchMedia("(max-width: 760px)");
+
+// Call the listener function initially
+handleMediaQuery(x);
+
+// Attach the listener function to changes in the media query state
+x.addEventListener("change", handleMediaQuery);
