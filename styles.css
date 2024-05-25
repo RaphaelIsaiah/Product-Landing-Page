@@ -26,7 +26,7 @@ body {
   object-fit: contain;
 }
 
-#nav-bar {
+.topnav {
   background-color: var(--bg-color-2);
   display: flex;
   position: fixed;
@@ -64,14 +64,19 @@ body {
 }
 
 .product-name {
-  font-size: 27px;
+  font-size: 1.6875rem;
   margin-left: 1rem;
   font-weight: 550;
   font-family: var(--font-3);
 }
 
-.icon {
+#ham-menu {
   display: none;
+}
+
+.bar-icon {
+  display: none;
+  text-decoration: none;
 }
 
 section::before {
@@ -157,9 +162,9 @@ h2 {
   margin: auto;
 }
 
-.icon {
+.icon, .bar-icon {
   font-size: 25px;
-  color: rgb(127, 111, 127);
+  color: var(--color-1);
 }
 
 .gallery img {
@@ -275,6 +280,8 @@ footer {
   padding: 30px 20px 2px;
 }
 
+/* ------ MEDIA QUERIES ----- */
+
 /* This applies when the width is 600px upwards */
 @media only screen and (min-width: 600px) {
   #nav-bar {
@@ -307,8 +314,9 @@ footer {
   }
 }
 
+/* Applies when the width <= 760px */
 @media only screen and (760px >= width) {
-  #nav-bar {
+  .topnav {
     flex-direction: row;
   }
 
@@ -316,21 +324,17 @@ footer {
     justify-content: left;
   }
 
-  .icon {
+  .bar-icon {
     display: flex;
-  }
-
-  #close {
-    display: none;
-  }
-
-  #nav-bar {
-    flex-direction: row;
   }
 
   #myLinks {
     flex-direction: row;
     justify-content: left;
+  }
+
+  #ham-menu {
+    padding: 1rem;
   }
 }
 

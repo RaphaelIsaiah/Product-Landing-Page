@@ -85,37 +85,31 @@ proPlan.addEventListener("click", () => {
 
 // Functionality for hamburger menu
 // Toggles the menu when hamburger icon is clicked.
-let logoBox = document.getElementById("logo-box");
-let closeButton = document.getElementById("close");
-let openButton = document.getElementById("open");
+
 let links = document.getElementById("myLinks");
-let barsIcon = document.getElementById("bars");
+let hamMenu = document.getElementById("ham-menu");
+let navBar = document.getElementById("nav-bar");
 
 const toggleMenu = () => {
-  if (links.style.display === "flex") {
-    links.style.display = "none";
-    logoBox.style.display = "flex";
-    closeButton.style.display = "none";
-    openButton.style.display = "block";
+  if (hamMenu.style.display === "flex") {
+    hamMenu.style.display = "none";
+    navBar.style.display = "flex";
   } else {
-    links.style.display = "flex";
-    logoBox.style.display = "none";
-    closeButton.style.display = "block";
-    openButton.style.display = "none";
+    hamMenu.style.display = "flex";
+    navBar.style.display = "none";
   }
 };
 
 // Functionality to handle changes in the media query
 const handleMediaQuery = (x) => {
-  // let links = document.getElementById("myLinks");
   if (x.matches) {
     // If the media query matches (viewport width <= 760px)
     links.style.display = "none";
-    // barsIcon.style.display = "block";
   } else {
     // Otherwise (viewport width > 760px)
+    navBar.style.display = "flex";
     links.style.display = "flex";
-    logoBox.style.display = "flex";
+    hamMenu.style.display = "none";
   }
 };
 
