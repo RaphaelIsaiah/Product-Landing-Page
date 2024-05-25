@@ -19,7 +19,7 @@ body {
   background-color: var(--bg-color-1);
 }
 
-/* Design for Mobile first... */
+/* Design mostly for Mobile first... */
 
 #header-img {
   width: 60px;
@@ -308,42 +308,77 @@ footer {
 }
 
 @media only screen and (760px >= width) {
-  /* Hides links initially... */
-  .topnav #myLinks {
+  #nav-bar {
+    flex-direction: row;
+  }
+
+  #logo-box {
+    justify-content: left;
+  }
+
+  .icon {
+    display: flex;
+  }
+
+  #close {
     display: none;
   }
-  .icon {
-    display: block;
+
+  #nav-bar {
+    flex-direction: row;
+  }
+
+  #myLinks {
+    flex-direction: row;
+    justify-content: left;
   }
 }
 
 /* This is when the width is between 650px and 750px*/
 @media only screen and (650px < width < 750px) {
   .gallery img {
-    max-width: 300px;
+    max-width: 18.75rem;
   }
 }
 
 /* This applies when the width is < or = 450px */
-@media only screen and (455px >= width) {
+/* @media only screen and (455px >= width) {
   #hero {
     margin-top: 80px;
+  }
+} */
+@media only screen and (455px >= width) {
+  .product-name {
+    font-size: 1.3rem;
+  }
+  #header-img {
+    width: 2.1rem;
+  }
+  .icon {
+    padding-right: 1rem;
   }
 }
 
 /* This applies when the width is < or = 200px */
 @media only screen and (269px >= width) {
+  #nav-bar {
+    justify-content: space-between;
+  }
+
   #logo-box {
     flex-wrap: wrap;
   }
-  #hero {
-    margin-top: 130px;
+  .product-name {
+    display: none;
   }
+  /* #hero {
+    margin-top: 130px;
+  } */
 }
 
 /* This applies when the width is < or = 204px */
 @media only screen and (204px >= width) {
-  #hero {
+  /* #hero {
     margin-top: 13rem;
-  }
+  } */
 }
