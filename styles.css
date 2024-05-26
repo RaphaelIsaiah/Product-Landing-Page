@@ -363,10 +363,6 @@ footer {
     border-radius: 1.5rem 0.4rem 1.2rem;
   }
 
-  .nav-link {
-    width: 60%;
-  }
-
   #close {
     position: fixed;
     right: 1.25rem;
