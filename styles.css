@@ -19,14 +19,12 @@ body {
   background-color: var(--bg-color-1);
 }
 
-/* Design mostly for Mobile first... */
-
 #header-img {
   width: 60px;
   object-fit: contain;
 }
 
-.topnav {
+.topnav, .ham-nav-menu {
   background-color: var(--bg-color-2);
   display: flex;
   position: fixed;
@@ -54,6 +52,7 @@ body {
   align-self: center;
   height: 100%;
 }
+
 .nav-link {
   display: flex;
   text-decoration: none;
@@ -340,12 +339,38 @@ footer {
     height: max-content;
   }
 
+  .ham-nav-menu {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 7px 2px;
+    overflow: scroll;
+  }
+
+  #hamLinks {
+    list-style-type: none;
+    /* background-color: aqua; */
+    width: 80%;
+  }
+
+  #hamLinks li, .color {
+    width: 100%;
+  }
+
+  .color:hover {
+    background-color: var(--color-2);
+    color: var(--bg-color-2);
+    border-radius: 1.5rem 0.4rem 1.2rem;
+  }
+
+  /* #hamlinks a:hover */
+
   #logo-box {
     justify-content: left;
   }
 
   .bar-icon {
     display: flex;
+    /* background-color: blueviolet; */
   }
 
   #myLinks {
@@ -364,10 +389,9 @@ footer {
     border-radius: 1.5rem 0.4rem 1.2rem;
   }
 
-  #close {
-    position: fixed;
-    right: 1.25rem;
-    top: 1.5625rem;
+  .fa-circle-xmark {
+    height: 7rem;
+    /* background-color: blue; */
   }
 }
 
