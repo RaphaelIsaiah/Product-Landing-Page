@@ -90,11 +90,14 @@ let links = document.getElementById("myLinks");
 let hamMenu = document.getElementById("ham-menu");
 let navBar = document.getElementById("nav-bar");
 
+// When the hamburger icon appears and is clicked, this function is called and displays the hamburger menu.
 const toggleMenu = () => {
   if (hamMenu.style.display === "flex") {
+    // Toggle OFF
     hamMenu.style.display = "none";
     navBar.style.display = "flex";
   } else {
+    // Toggle ON
     hamMenu.style.display = "flex";
     navBar.style.display = "none";
   }
@@ -104,6 +107,8 @@ const toggleMenu = () => {
 const handleMediaQuery = (x) => {
   if (x.matches) {
     // If the media query matches (viewport width <= 760px)
+    // At this point the hamburger icon will display according to the css styling rule set.
+    // And the main navigation menu for viewports > 760px will not be displayed.
     links.style.display = "none";
   } else {
     // Otherwise (viewport width > 760px)
