@@ -36,6 +36,7 @@ body {
   padding: 7px;
   overflow: hidden;
   box-shadow: 0px 1px 10px 2px var(--color-2);
+  z-index: 1;
 }
 
 #myLinks {
@@ -206,7 +207,7 @@ h2 {
   margin-top: 10px;
 }
 
-.price:hover {
+.price:hover, .gallery img:hover {
   transform: scale(1.02);
   transition: 0.4s;
   cursor: pointer;
