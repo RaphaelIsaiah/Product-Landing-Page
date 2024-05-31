@@ -52,17 +52,16 @@
           <span class="product-name">Tailor Institute</span>
         </a>
 
-        <!-- Navigation Links -->
+        <!-- Navigation Links For Screen Sizes Above 760px -->
         <ul id="myLinks" class="menu nav-links">
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#iframe" class="nav-link">Watch</a></li>
           <li><a href="#gallery-section" class="nav-link">Gallery</a></li>
           <li><a href="#pricing" class="nav-link">Pricing</a></li>
           <li><a href="#form" class="nav-link">Contact</a></li>
-          <!-- Each link when clicked should go to the corresponding section on the landing page.  -->
         </ul>
 
-        <!-- Hamburger Icon to toggle nav links -->
+        <!-- Hamburger Icon to toggle nav links__ Displays only on screens sizes below 760px -->
         <a
           id="bars"
           href="javascript:void(0);"
@@ -73,17 +72,21 @@
         </a>
       </nav>
 
-      <!-- Navigation for hamburger menu -->
+      <!-- Navigation links for the hamburger menu which displays upon toggle -->
       <nav id="ham-menu" class="ham-nav-menu">
-        <ul id="hamLinks" class="hamLinks">
+        <ul id="hamLinks">
           <li><a href="#about" class="nav-link color">About</a></li>
           <li><a href="#iframe" class="nav-link color">Watch</a></li>
           <li><a href="#gallery-section" class="nav-link color">Gallery</a></li>
           <li><a href="#pricing" class="nav-link color">Pricing</a></li>
           <li><a href="#form" class="nav-link color">Contact</a></li>
-          <!-- Each link when clicked should go to the corresponding section on the landing page.  -->
         </ul>
-        <a href="javascript:void(0);" class="bar-icon close" onclick="toggleMenu()">
+
+        <a
+          href="javascript:void(0);"
+          class="bar-icon close"
+          onclick="toggleMenu()"
+        >
           <i id="close" class="fa-regular fa-circle-xmark"></i>
         </a>
       </nav>
