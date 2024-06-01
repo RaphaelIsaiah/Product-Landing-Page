@@ -175,20 +175,16 @@ section {
 }
 
 /* ----------- Gallery Section ---------- */
+/* Using the grid system here helps make the gallery more responsive. */
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0.625rem;
-  padding: 0.625rem;
-  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 0.5rem;
 }
 
 .gallery img {
-  width: 100%;
-  max-width: 21.875rem;
   height: 21.875rem;
+  width: 100%;
   object-fit: cover;
   border-radius: 0.625rem;
 }
@@ -280,6 +276,8 @@ h3 {
 
 #submit {
   width: 40%;
+  display: flex;
+  justify-content: center;
 }
 
 #submit:hover {
@@ -288,6 +286,7 @@ h3 {
   background-color: var(--color-1);
   color: var(--bg-color-2);
 }
+
 /* ----------- Footer ---------- */
 footer {
   text-align: right;
@@ -346,14 +345,10 @@ footer {
   }
 }
 
-@media only screen and (max-width: 749px) and (min-width: 650px) {
-  .gallery img {
-    max-width: 18.75rem;
-  }
-}
-@media only screen and (max-width: 649px) and (min-width: 550px) {
-  .gallery img {
-    max-width: 15.625rem;
+/* 490px / 16px = 30.625em */
+@media (max-width: 30.625em) {
+  .gallery {
+    grid-template-columns: 1fr;
   }
 }
 
