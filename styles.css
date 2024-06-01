@@ -28,6 +28,7 @@ a {
 }
 
 /* ---------------- Header Navigation Pane ------------------ */
+
 #header-img {
   width: 3.125rem;
   object-fit: contain;
@@ -39,41 +40,41 @@ a {
   display: flex;
   position: fixed;
   top: 0;
-  flex-direction: column;
+  left: 0;
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  padding: 0.4375rem;
-  overflow: hidden;
   box-shadow: 0px 1px 10px 2px var(--color-2);
-  z-index: 1;
+  z-index: 10;
+  /* padding: 0.4375rem; */
+  /* flex-direction: column; */
 }
 
 #myLinks {
   display: flex;
-  flex-wrap: wrap;
-  align-self: center;
-  justify-content: center;
-  height: 4rem;
+  /* flex-wrap: wrap; */
+  /* align-self: center; */
+  /* justify-content: center; */
+  /* height: 4rem; */
 }
 
-#myLinks li {
+/* #myLinks li {
   display: flex;
   align-self: center;
   height: 100%;
-}
+} */
 
 .nav-link {
-  display: flex;
+  display: block;
   text-decoration: none;
   color: var(--color-1);
-  padding: 0 1rem;
+  padding: 0.8125rem;
   font-family: var(--font-2);
   cursor: pointer;
-  font-size: 100%;
   align-items: center;
-  height: 100%;
   transition: background-color 0.7s, color 0.5s, border-radius 0.7s;
+  /* height: 100%; */
+  /* font-size: 100%; */
 }
 
 #myLinks .nav-link:hover {
@@ -84,9 +85,11 @@ a {
 
 #logo-box {
   display: flex;
+  color: var(--color-1);
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  padding: 0.1875rem;
+  /* justify-content: center; */
+  /* text-align: center; */
 }
 
 .product-name {
@@ -96,13 +99,14 @@ a {
   font-family: var(--font-3);
 }
 
-#ham-menu {
-  display: none;
-}
-
+#ham-menu,
 .bar-icon {
   display: none;
 }
+
+/* .bar-icon {
+  display: none;
+} */
 
 /* ------------------ Handles the spacing between sections ------------ */
 /* -------- I need to find a way around to refactor this code to something better. Including the individual margin tops in different sections. */
@@ -347,11 +351,11 @@ footer {
 
 /* Applies when the width <= 760px */
 @media only screen and (760px >= width) {
-  .topnav {
+  /* .topnav {
     flex-direction: row;
     overflow: scroll;
     height: max-content;
-  }
+  } */
 
   .ham-nav-menu {
     flex-direction: row;
