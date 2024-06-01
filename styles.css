@@ -43,7 +43,17 @@ h2 {
   color: var(--color-1);
 }
 
-/* ---------------- Header Navigation Pane ------------------ */
+section {
+  text-align: center;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+}
+
+#iframe, #gallery-section, #pricing {
+  padding-top: 4.2rem;
+}
+
+/* ------- Header Navigation Pane ------- */
 
 #header-img {
   width: 3.125rem;
@@ -105,25 +115,12 @@ h2 {
   display: none;
 }
 
-/* ------------------ Handles the spacing between sections ------------ */
-/* -------- I need to find a way around to refactor this code to something better. Including the individual margin tops in different sections. */
-
-section::before {
-  display: block;
-  content: " ";
-  margin-top: -180px;
-  height: 290px;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-section {
-  margin: -60px auto;
-  text-align: center;
-  padding: 10px;
-}
 
 /* -------------- Hero Section ---------- */
+#about {
+  padding-top: 0.1rem;
+}
+
 #hero {
   display: flex;
   flex-direction: column;
@@ -131,12 +128,12 @@ section {
   justify-content: center;
   width: 100%;
   margin: auto;
-  padding: 0.625rem;
+  padding: 0 0.625rem;
   margin-top: 3.75rem;
 }
 
 .aside {
-  padding: 1.25rem 0.625rem 0.625rem;
+  padding: 1.25rem 0.625rem 0;
 }
 
 .aside h1 {
@@ -151,7 +148,6 @@ section {
 .aside p {
   color: var(--color-1);
   font-family: var(--font-2);
-  margin-bottom: 0.625rem;
 }
 
 .side {
@@ -326,8 +322,6 @@ footer {
   #hero {
     flex-direction: row;
     justify-content: space-around;
-    /* margin-top: 1.875rem; */
-    /* padding-top: 1.25rem; */
   }
 
   .aside,
@@ -372,17 +366,3 @@ footer {
     display: none;
   }
 }
-
-/* This applies when the width is < or = 450px */
-/* @media only screen and (455px >= width) {
-  #hero {
-    margin-top: 80px;
-  }
-} */
-
-/* This applies when the width is < or = 204px */
-/* @media only screen and (204px >= width) {
-  #hero {
-    margin-top: 13rem;
-  }
-} */
