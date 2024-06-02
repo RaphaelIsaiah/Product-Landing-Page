@@ -59,29 +59,20 @@ const renderGallery = (array) => {
 
 renderGallery(galleryStore);
 
-// Functionality to focus the email input when one of the plans or contact hyperlink is clicked.
+// Functionality to focus the email input when one of the plans is clicked.
 const email = document.getElementById("email");
 const basicPlan = document.getElementById("basic-plan");
 const proPlan = document.getElementById("pro-plan");
-const contactLink = document.getElementById("contact");
 
 const focusInput = (name) => {
-  if (name === "basic" || name === "pro" || name === "contact") {
+  if (name === "basic" || name === "pro") {
     email.classList.remove("shaking-input");
 
     email.focus();
     email.classList.add("shaking-input");
-
-    const message =
-      name === "basic"
-        ? "You chose the Basic Plan"
-        : name === "pro"
-        ? "You chose the Pro Plan"
-        : name === "contact"
-        ? "Contact us"
-        : "";
-
-    console.log(message);
+    name === "basic"
+      ? console.log("You chose the Basic Plan")
+      : console.log("You chose the Pro Plan");
   }
 };
 
@@ -91,10 +82,6 @@ basicPlan.addEventListener("click", () => {
 
 proPlan.addEventListener("click", () => {
   focusInput("pro");
-});
-
-contactLink.addEventListener("click", () => {
-  focusInput("contact");
 });
 
 // Functionality for hamburger menu
