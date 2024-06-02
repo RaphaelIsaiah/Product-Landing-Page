@@ -63,6 +63,7 @@ renderGallery(galleryStore);
 const email = document.getElementById("email");
 const basicPlan = document.getElementById("basic-plan");
 const proPlan = document.getElementById("pro-plan");
+const contactLink = document.getElementById("contact");
 
 const focusInput = (name) => {
   if (name === "basic" || name === "pro" || name === "contact") {
@@ -87,8 +88,13 @@ const focusInput = (name) => {
 basicPlan.addEventListener("click", () => {
   focusInput("basic");
 });
+
 proPlan.addEventListener("click", () => {
   focusInput("pro");
+});
+
+contactLink.addEventListener("click", () => {
+  focusInput("contact");
 });
 
 // Functionality for hamburger menu
